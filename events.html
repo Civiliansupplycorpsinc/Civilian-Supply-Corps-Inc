@@ -6,64 +6,73 @@
 <title>Events | Civilian Supply Corps Inc.</title>
 
 <style>
-body {
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f4f6f9;
+body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#f4f6f9; }
+
+header {
+    background:linear-gradient(135deg,#0b3c78,#1d6fd6);
+    color:white;
+    padding:40px 20px;
+    text-align:center;
 }
 
-/* Top navigation bar */
+.logo {
+    width:220px;
+    display:block;
+    margin:0 auto 15px auto;
+}
 
-.topbar{
+nav {
     background:#08315e;
-    padding:10px 20px;
-    display:flex;
-    align-items:center;
+    padding:15px;
+    text-align:center;
 }
 
-.logo{
-    height:45px;
-    margin-right:25px;
-}
-
-nav a{
+nav a {
     color:white;
     text-decoration:none;
-    margin-right:20px;
+    margin:15px;
     font-weight:bold;
 }
 
-nav a:hover{
+nav a:hover {
     text-decoration:underline;
 }
 
-/* Page content */
-
-section{
+section {
     max-width:1000px;
     margin:auto;
     padding:40px 20px;
 }
 
-h2{
+h2 {
     text-align:center;
     color:#08315e;
 }
 
-.event{
+.event {
     background:white;
     padding:20px;
     margin-bottom:20px;
     border-radius:8px;
+}
+
+footer {
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-
+<header>
 <img src="logo.png" class="logo">
+<h1>Civilian Supply Corps Inc.</h1>
+<p>CSC is a 501(c)(3) charity</p>
+</header>
 
 <nav>
 <a href="index.html">Home</a>
@@ -74,8 +83,6 @@ h2{
 <a href="contact.html">Contact</a>
 <a href="events.html">Events</a>
 </nav>
-
-</div>
 
 <section>
 
@@ -96,6 +103,10 @@ h2{
 </div>
 
 </section>
+
+<footer>
+<p>© Civilian Supply Corps Inc.</p>
+</footer>
 
 </body>
 </html>
