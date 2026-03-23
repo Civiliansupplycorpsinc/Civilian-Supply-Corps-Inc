@@ -13,7 +13,7 @@ body {
     background:#f4f6f9;
 }
 
-/* Header with big logo */
+/* Header */
 
 header {
     background:linear-gradient(135deg,#0b3c78,#1d6fd6);
@@ -28,18 +28,19 @@ header {
     margin:0 auto 15px auto;
 }
 
-/* Navigation tabs */
+/* Navigation */
 
 nav {
     background:#08315e;
-    padding:15px;
+    padding:10px;
     text-align:center;
 }
 
 nav a {
+    display:inline-block;
     color:white;
     text-decoration:none;
-    margin:15px;
+    margin:10px;
     font-weight:bold;
 }
 
@@ -47,7 +48,7 @@ nav a:hover {
     text-decoration:underline;
 }
 
-/* Page content */
+/* Content */
 
 section {
     max-width:1000px;
@@ -67,12 +68,51 @@ h2 {
     border-radius:8px;
 }
 
+/* Footer */
+
 footer {
     background:#111;
     color:white;
     text-align:center;
     padding:20px;
     margin-top:40px;
+}
+
+/* Make images responsive */
+
+img {
+    max-width:100%;
+    height:auto;
+}
+
+/* MOBILE FIX (VERY IMPORTANT) */
+
+@media (max-width: 768px) {
+
+    header {
+        padding:20px 10px;
+    }
+
+    .logo {
+        width:150px;
+    }
+
+    nav a {
+        display:block;
+        margin:10px 0;
+    }
+
+    section {
+        padding:20px 10px;
+    }
+
+    h1 {
+        font-size:22px;
+    }
+
+    h2 {
+        font-size:20px;
+    }
 }
 
 </style>
@@ -101,13 +141,23 @@ footer {
 <h2>Events</h2>
 
 <div class="event">
-<h3>Check back often for announcements of our future events. </h3>
-<div/>
+<h3>Community Supply Drive</h3>
+<p>Date: TBD</p>
+<p>Location: TBD</p>
+<p>Details about the event will go here.</p>
+</div>
+
+<div class="event">
+<h3>Training Workshop</h3>
+<p>Date: TBD</p>
+<p>Location: TBD</p>
+<p>More information coming soon.</p>
+</div>
 
 </section>
 
 <footer>
-<p>© Civilian Supply Corps Inc.</p>
+<p>© 2026 Civilian Supply Corps Inc.</p>
 </footer>
 
 </body>
