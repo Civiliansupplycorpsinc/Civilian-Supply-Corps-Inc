@@ -29,7 +29,8 @@
 <h2>Care Packages</h2>
 
 <div class="gallery">
-<img src="photo2.jpg">
+  <img src="photo2.jpg" onclick="openModal(this.src)">
+</div>
 <img src="photo3.jpg">
 <img src="photo4.jpg">
 <img src="photo10.jpg">
@@ -163,6 +164,20 @@
 </div>
 
 </section>
+      <div id="modal" class="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(src) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("modalImg").src = src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 
 <footer>
 © 2026 Civilian Supply Corps Inc.
