@@ -182,6 +182,22 @@ function closeModal() {
 <footer>
 © 2026 Civilian Supply Corps Inc.
 </footer>
+<div id="modal" class="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
 
+<script>
+function openModal(src) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("modalImg").src = src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
 </body>
 </html>
