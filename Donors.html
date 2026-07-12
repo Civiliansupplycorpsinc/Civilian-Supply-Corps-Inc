@@ -7,13 +7,7 @@
 <title>Photos - Civilian Supply Corps</title>
 <link rel="stylesheet" href="style.css">
 </head>
-.gallery img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
+
 
 <body>
 
@@ -40,7 +34,23 @@
 <a href="events.html">Events</a>
 
 </nav>
+body {
+    background-color: white;
+}
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 8px;
+}
 
 <section>
 
