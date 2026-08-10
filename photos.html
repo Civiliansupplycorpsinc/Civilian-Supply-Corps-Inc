@@ -139,7 +139,7 @@
   <img src="photo151.jpg">    
  </div>
     
-  <h2>Events</h2>
+   <h2>Events</h2>
  <div class="gallery">
   <img src="photo35.jpg">
   <img src="photo36.jpg">
@@ -163,7 +163,42 @@
   <img src="photo108.jpg">    
 </div>
 
-</body>
-</html>
+
+<!-- PHOTO ENLARGEMENT CODE STARTS HERE -->
+
+<div id="photoLightbox" class="photo-lightbox">
+    <span class="close">&times;</span>
+    <img id="lightboxImage" src="" alt="Enlarged photo">
+</div>
+
+<script>
+const photos = document.querySelectorAll('.gallery img');
+const lightbox = document.getElementById('photoLightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+const closeButton = document.querySelector('.photo-lightbox .close');
+
+photos.forEach(photo => {
+    photo.style.cursor = 'pointer';
+
+    photo.addEventListener('click', function() {
+        lightbox.style.display = 'flex';
+        lightboxImage.src = this.src;
+    });
+});
+
+closeButton.addEventListener('click', function() {
+    lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', function(event) {
+    if (event.target === lightbox) {
+        lightbox.style.display = 'none';
+    }
+});
+</script>
+
+<!-- PHOTO ENLARGEMENT CODE ENDS HERE -->
+
+
 </body>
 </html>
