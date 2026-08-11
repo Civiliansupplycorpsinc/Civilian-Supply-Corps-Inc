@@ -166,38 +166,6 @@
 
 <!-- PHOTO ENLARGEMENT CODE STARTS HERE -->
 
-<div id="photoLightbox" class="photo-lightbox">
-    <span class="close">&times;</span>
-    <img id="lightboxImage" src="" alt="Enlarged photo">
-</div>
-
-<script>
-const photos = document.querySelectorAll('.gallery img');
-const lightbox = document.getElementById('photoLightbox');
-const lightboxImage = document.getElementById('lightboxImage');
-const closeButton = document.querySelector('.photo-lightbox .close');
-
-photos.forEach(photo => {
-    photo.style.cursor = 'pointer';
-
-    photo.addEventListener('click', function() {
-        lightbox.style.display = 'flex';
-        lightboxImage.src = this.src;
-    });
-});
-
-closeButton.addEventListener('click', function() {
-    lightbox.style.display = 'none';
-});
-
-lightbox.addEventListener('click', function(event) {
-    if (event.target === lightbox) {
-        lightbox.style.display = 'none';
-    }
-});
-</script>
-
-<!-- PHOTO ENLARGEMENT CODE ENDS HERE -->
 </div>
 
 <div id="photoLightbox" class="photo-lightbox">
