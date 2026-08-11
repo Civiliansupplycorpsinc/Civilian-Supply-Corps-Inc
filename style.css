@@ -83,12 +83,11 @@ footer {
 }
 
 .photo-lightbox img {
-    max-width: 95%;
-    max-height: 95%;
-    width: auto;
-    height: auto;
+    width: 90vw;
+    height: 90vh;
     object-fit: contain;
-}
+    max-width: none;
+    max-height: none;
 }
 
 .photo-lightbox .close {
