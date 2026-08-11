@@ -198,7 +198,36 @@ lightbox.addEventListener('click', function(event) {
 </script>
 
 <!-- PHOTO ENLARGEMENT CODE ENDS HERE -->
+</div>
 
+<div id="photoLightbox" class="photo-lightbox">
+    <span class="close">&times;</span>
+    <img id="lightboxImage" alt="Enlarged photo">
+</div>
+
+<script>
+document.querySelectorAll(".gallery img").forEach(function(photo) {
+
+    photo.addEventListener("click", function() {
+        document.getElementById("photoLightbox").style.display = "flex";
+        document.getElementById("lightboxImage").src = this.src;
+    });
+
+});
+
+document.querySelector(".photo-lightbox .close").addEventListener("click", function() {
+    document.getElementById("photoLightbox").style.display = "none";
+});
+
+document.getElementById("photoLightbox").addEventListener("click", function(e) {
+    if (e.target === this) {
+        this.style.display = "none";
+    }
+});
+</script>
+
+</body>
+</html>
 
 </body>
 </html>
