@@ -99,3 +99,48 @@ footer {
     font-weight: bold;
     cursor: pointer;
 }
+/* Gold/brass cartridge-style bullets */
+
+.military-bullets {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.military-bullets li {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Bullet/cartridge */
+.military-bullets li::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 14px;
+    height: 30px;
+
+    /* Brass/gold color */
+    background: linear-gradient(
+        to right,
+        #8c6a1d 0%,
+        #d4af37 25%,
+        #f5d76e 50%,
+        #d4af37 75%,
+        #8c6a1d 100%
+    );
+
+    /* Rounded projectile/casing shape */
+    border-radius: 50% 50% 15% 15%;
+
+    /* Metallic appearance */
+    box-shadow:
+        inset 1px 0 1px rgba(255,255,255,0.5),
+        inset -1px 0 1px rgba(0,0,0,0.35),
+        2px 2px 4px rgba(0,0,0,0.35);
+}
