@@ -100,23 +100,33 @@ footer {
     cursor: pointer;
 }
 /* =========================================
-   MILITARY / SNIPER BULLET LIST
+   MILITARY / POINTED BULLET LIST
    ========================================= */
 
 /* Removes the normal bullet points */
+
 .military-bullets {
     list-style: none;
     padding-left: 0;
     margin-left: 0;
 }
 
-/* Controls each list item */
+
+/* Controls the list items */
+
 .military-bullets li {
     position: relative;
+
+    /* Space between the bullet and text */
     padding-left: 45px;
+
+    /* Space between list items */
     margin-bottom: 15px;
+
+    /* Makes the text easier to read */
     line-height: 1.5;
 }
+
 
 /* =========================================
    POINTED BRASS BULLET
@@ -124,18 +134,19 @@ footer {
 
 .military-bullets li::before {
     content: "";
+
     position: absolute;
 
-    /* Position bullet to the left of the text */
+    /* Position bullet to the left of text */
     left: 5px;
-    top: 50%;
 
-    /* Center vertically */
+    /* Center bullet vertically */
+    top: 50%;
     transform: translateY(-50%);
 
     /* Bullet size */
-    width: 16px;
-    height: 38px;
+    width: 12px;
+    height: 30px;
 
     /* Brass / gold metallic appearance */
     background: linear-gradient(
@@ -148,7 +159,7 @@ footer {
         #765516 100%
     );
 
-    /* Pointed projectile shape */
+    /* Pointed bullet shape */
     clip-path: polygon(
         50% 0%,
         72% 15%,
@@ -159,7 +170,7 @@ footer {
         28% 15%
     );
 
-    /* Metallic 3D effect */
+    /* Metallic appearance */
     box-shadow:
         inset 2px 0 2px rgba(255, 255, 255, 0.5),
         inset -2px 0 2px rgba(0, 0, 0, 0.4),
