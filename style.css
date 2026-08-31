@@ -100,10 +100,8 @@ footer {
     cursor: pointer;
 }
 /* =========================================
-   MILITARY / POINTED BULLET LIST
+   MILITARY / SNIPER BULLET LIST
    ========================================= */
-
-/* Removes the normal bullet points */
 
 .military-bullets {
     list-style: none;
@@ -111,25 +109,17 @@ footer {
     margin-left: 0;
 }
 
-
-/* Controls the list items */
-
 .military-bullets li {
     position: relative;
-
-    /* Space between the bullet and text */
-    padding-left: 45px;
-
-    /* Space between list items */
+    padding-left: 60px;
     margin-bottom: 15px;
-
-    /* Makes the text easier to read */
     line-height: 1.5;
 }
 
 
 /* =========================================
-   POINTED BRASS BULLET
+   HORIZONTAL SNIPER BULLET
+   Point faces toward the text
    ========================================= */
 
 .military-bullets li::before {
@@ -137,20 +127,20 @@ footer {
 
     position: absolute;
 
-    /* Position bullet to the left of text */
+    /* Position next to the text */
     left: 5px;
-
-    /* Center bullet vertically */
     top: 50%;
+
+    /* Center vertically */
     transform: translateY(-50%);
 
-    /* Bullet size */
-    width: 12px;
-    height: 30px;
+    /* Horizontal bullet */
+    width: 42px;
+    height: 14px;
 
-    /* Brass / gold metallic appearance */
+    /* Metallic brass color */
     background: linear-gradient(
-        to right,
+        to bottom,
         #765516 0%,
         #b8860b 20%,
         #f0c75e 45%,
@@ -159,20 +149,17 @@ footer {
         #765516 100%
     );
 
-    /* Pointed bullet shape */
+    /* Pointed nose facing RIGHT */
     clip-path: polygon(
-        50% 0%,
-        72% 15%,
-        100% 35%,
-        100% 100%,
-        0% 100%,
-        0% 35%,
-        28% 15%
+        0% 20%,
+        70% 20%,
+        100% 50%,
+        70% 80%,
+        0% 80%
     );
 
-    /* Metallic appearance */
-    box-shadow:
-        inset 2px 0 2px rgba(255, 255, 255, 0.5),
-        inset -2px 0 2px rgba(0, 0, 0, 0.4),
-        2px 3px 5px rgba(0, 0, 0, 0.35);
+    /* Metallic shadow */
+    filter: drop-shadow(
+        2px 3px 3px rgba(0, 0, 0, 0.4)
+    );
 }
