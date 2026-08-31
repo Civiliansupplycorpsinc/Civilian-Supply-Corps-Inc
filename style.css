@@ -99,14 +99,18 @@ footer {
     font-weight: bold;
     cursor: pointer;
 }
-/* Gold/brass cartridge-style bullets */
+/* =========================================
+   MILITARY / SNIPER BULLET LIST
+   ========================================= */
 
+/* Removes the normal bullet points */
 .military-bullets {
     list-style: none;
     padding-left: 0;
     margin-left: 0;
 }
 
+/* Controls each list item */
 .military-bullets li {
     position: relative;
     padding-left: 45px;
@@ -114,33 +118,50 @@ footer {
     line-height: 1.5;
 }
 
-/* Bullet/cartridge */
+/* =========================================
+   POINTED BRASS BULLET
+   ========================================= */
+
 .military-bullets li::before {
     content: "";
     position: absolute;
+
+    /* Position bullet to the left of the text */
     left: 5px;
     top: 50%;
+
+    /* Center vertically */
     transform: translateY(-50%);
 
-    width: 14px;
-    height: 30px;
+    /* Bullet size */
+    width: 16px;
+    height: 38px;
 
-    /* Brass/gold color */
+    /* Brass / gold metallic appearance */
     background: linear-gradient(
         to right,
-        #8c6a1d 0%,
-        #d4af37 25%,
-        #f5d76e 50%,
-        #d4af37 75%,
-        #8c6a1d 100%
+        #765516 0%,
+        #b8860b 20%,
+        #f0c75e 45%,
+        #d4af37 55%,
+        #b8860b 80%,
+        #765516 100%
     );
 
-    /* Rounded projectile/casing shape */
-    border-radius: 50% 50% 15% 15%;
+    /* Pointed projectile shape */
+    clip-path: polygon(
+        50% 0%,
+        72% 15%,
+        100% 35%,
+        100% 100%,
+        0% 100%,
+        0% 35%,
+        28% 15%
+    );
 
-    /* Metallic appearance */
+    /* Metallic 3D effect */
     box-shadow:
-        inset 1px 0 1px rgba(255,255,255,0.5),
-        inset -1px 0 1px rgba(0,0,0,0.35),
-        2px 2px 4px rgba(0,0,0,0.35);
+        inset 2px 0 2px rgba(255, 255, 255, 0.5),
+        inset -2px 0 2px rgba(0, 0, 0, 0.4),
+        2px 3px 5px rgba(0, 0, 0, 0.35);
 }
